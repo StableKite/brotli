@@ -1,3 +1,10 @@
+brotli (1.0.7-6.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use `py3versions -s` for autopkgtest (Closes: #956875).
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 16 Apr 2020 10:07:13 +0200
+
 brotli (1.0.7-6) unstable; urgency=medium
 
   * Drop python2 support; Closes: #936242

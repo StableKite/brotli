@@ -10,7 +10,7 @@ Build-Depends: cmake,
                libpython3-all-dev <!nopython>,
                python3-all-dev:any <!nopython>,
                python3-setuptools <!nopython>,
-               python3:any <!nopython>,
+               python3:any <!nopython>
 Standards-Version: 4.4.1
 Vcs-Browser: https://salsa.debian.org/debian/brotli
 Vcs-Git: https://salsa.debian.org/debian/brotli.git
