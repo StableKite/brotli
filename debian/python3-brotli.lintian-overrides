@@ -1,2 +1,0 @@
-# False positive
-python3-brotli: hardening-no-fortify-functions usr/lib/python3/dist-packages/brotli.cpython-34m-x86_64-linux-gnu.so

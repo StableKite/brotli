@@ -1,3 +1,10 @@
+brotli (1.0.9-1) unstable; urgency=medium
+
+  * Use debhelper 13
+  * New upstream version 1.0.9
+
+ -- Tomasz Buchert <tomasz@debian.org>  Tue, 01 Sep 2020 22:25:32 +0200
+
 brotli (1.0.7-7) unstable; urgency=medium
 
   [ Debian Janitor ]

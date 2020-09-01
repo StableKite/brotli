@@ -4,8 +4,8 @@ Uploaders: Ondřej Surý <ondrej@debian.org>
 Section: python
 Priority: optional
 Build-Depends: cmake,
-               debhelper (>= 12),
-               debhelper-compat (= 12),
+               debhelper (>= 13),
+               debhelper-compat (= 13),
                dh-python <!nopython>,
                libpython3-all-dev <!nopython>,
                python3-all-dev:any <!nopython>,
