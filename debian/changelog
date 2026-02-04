@@ -1,3 +1,9 @@
+brotli (1.2.0-2) unstable; urgency=medium
+
+  * Import upstream fix to fix loong64 build (Closes: #1126927)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Wed, 04 Feb 2026 21:53:16 +0100
+
 brotli (1.2.0-1) unstable; urgency=medium
 
   * New upstream version 1.2.0
