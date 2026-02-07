@@ -1,3 +1,11 @@
+brotli (1.2.0-3) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Non-maintainer upload.
+  * Fix FTBFS with nopython profile. (Closes: #1127021)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 07 Feb 2026 09:41:56 +0100
+
 brotli (1.2.0-2) unstable; urgency=medium
 
   * Import upstream fix to fix loong64 build (Closes: #1126927)
