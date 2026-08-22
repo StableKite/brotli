@@ -1,3 +1,13 @@
+brotli (1.2.0-4) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Avoid using qemu whenever we try to build against arm64 (Closes: #1144507)
+
+  [ Tomasz Buchert ]
+  * Switch to debhelper 14
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 22 Aug 2026 16:27:53 +0200
+
 brotli (1.2.0-3) unstable; urgency=medium
 
   [ Helmut Grohne ]

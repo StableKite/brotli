@@ -1,10 +1,9 @@
 Source: brotli
-Standards-Version: 4.7.3
+Standards-Version: 4.7.4
 Maintainer: Tomasz Buchert <tomasz@debian.org>
 Uploaders: Ondřej Surý <ondrej@debian.org>
 Section: python
-Build-Depends: debhelper (>= 13),
-               debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 14),
                dh-python <!nopython>,
                cmake,
                libpython3-all-dev <!nopython>,

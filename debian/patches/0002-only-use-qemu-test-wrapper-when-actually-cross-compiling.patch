@@ -1,0 +1,35 @@
+From: Maximiliano Curia <maxy@debian.org>
+Date: Sat, 15 Aug 2026 18:00:00 +0000
+Subject: Only use the qemu test wrapper when actually cross-compiling
+
+---
+ CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 22b21d2..d3f0efc 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -231,19 +231,19 @@ endif()  # BROTLI_DISABLE_TESTS
+ if (NOT BROTLI_DISABLE_TESTS AND BROTLI_BUILD_TOOLS)
+   # If our compiler is a cross-compiler that we know about (arm/aarch64),
+   # then we need to use qemu to execute the tests.
+-  if ("${CMAKE_C_COMPILER}" MATCHES "^.*/arm-linux-gnueabihf-.*$")
++  if (CMAKE_CROSSCOMPILING AND "${CMAKE_C_COMPILER}" MATCHES "^.*/arm-linux-gnueabihf-.*$")
+     message(STATUS "Detected arm-linux-gnueabihf cross-compilation")
+     set(BROTLI_WRAPPER "qemu-arm")
+     set(BROTLI_WRAPPER_LD_PREFIX "/usr/arm-linux-gnueabihf")
+   endif()
+ 
+-  if ("${CMAKE_C_COMPILER}" MATCHES "^.*/arm-linux-gnueabi-.*$")
++  if (CMAKE_CROSSCOMPILING AND "${CMAKE_C_COMPILER}" MATCHES "^.*/arm-linux-gnueabi-.*$")
+     message(STATUS "Detected arm-linux-gnueabi cross-compilation")
+     set(BROTLI_WRAPPER "qemu-arm")
+     set(BROTLI_WRAPPER_LD_PREFIX "/usr/arm-linux-gnueabi")
+   endif()
+ 
+-  if ("${CMAKE_C_COMPILER}" MATCHES "^.*/aarch64-linux-gnu-.*$")
++  if (CMAKE_CROSSCOMPILING AND "${CMAKE_C_COMPILER}" MATCHES "^.*/aarch64-linux-gnu-.*$")
+     message(STATUS "Detected aarch64-linux-gnu cross-compilation")
+     set(BROTLI_WRAPPER "qemu-aarch64")
+     set(BROTLI_WRAPPER_LD_PREFIX "/usr/aarch64-linux-gnu")
