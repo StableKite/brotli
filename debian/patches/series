@@ -1,2 +1,3 @@
 0001-disable-BROTLI_MODEL-macro-for-some-targets.patch
 0002-only-use-qemu-test-wrapper-when-actually-cross-compiling.patch
+CVE-2026-111497.patch
