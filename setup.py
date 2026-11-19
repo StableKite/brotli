@@ -6,6 +6,7 @@
 import os
 import platform
 import re
+import sysconfig
 import unittest
 
 try:
@@ -325,6 +326,10 @@ else:
                 "c/include",
             ]),
     ]
+
+if os.name == "nt" and sysconfig.get_config_var("Py_GIL_DISABLED"):
+    for extension in EXT_MODULES:
+        extension.define_macros.append(("Py_GIL_DISABLED", "1"))
 
 TEST_SUITE = "setup.get_test_suite"
 
